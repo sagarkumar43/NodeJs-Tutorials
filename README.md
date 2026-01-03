@@ -32,3 +32,16 @@ This folder explains the module system in Node.js, including custom modules, cor
 - **custom-module/**: A folder demonstrating custom module creation and usage.
   - **math.js**: Defines and exports `add` and `subtract` functions using `module.exports`.
   - **app.js**: Imports the math module using `require()` and demonstrates its usage by performing addition and subtraction operations.
+
+## Day3 - File System and Sync vs Async
+
+This folder introduces the File System (fs) module in Node.js and demonstrates the difference between synchronous and asynchronous operations.
+
+### Files:
+- **explaination.txt**: Contains explanations in Hindi about the fs module and sync vs async operations, including:
+  - What is the fs module in Node.js?
+  - Difference between synchronous (blocking) and asynchronous (non-blocking) operations
+
+- **sync.js**: Demonstrates synchronous file reading using `fs.readFileSync()`. This blocks the execution until the file is read, then continues with the next statements.
+
+- **async.js**: Demonstrates asynchronous file reading using `fs.readFile()` with a callback. This allows the program to continue executing while the file is being read in the background.

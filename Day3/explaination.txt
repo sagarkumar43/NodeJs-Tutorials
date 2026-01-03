@@ -1,0 +1,8 @@
+Q1: fs kya hota hai Nodejs mai?
+Ans: fs Stand for File System, ye ek pre-install/ in-built core module hai jo user ko file k sath kaam karne k liye allow karta hai like:
+File Read, File Write, File Update, File Delete.
+
+Q2: Sync vs Async?
+Ans: Sync=> ye ek Blocking par hai. mtlab kaam complete hone k bad server ruk jata hai.
+example : sync.js ans async.js
+
