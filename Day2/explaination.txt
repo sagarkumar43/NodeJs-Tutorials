@@ -1,0 +1,25 @@
+Q1. Module kya hote hai?
+Ans: Module ek code ka tukda hota hai jisko hum multiple times reuse ho sake.
+for example : Charger => har device m use ho skata hai (depends on the mobile and charger port). same waise hi module hai alag file har jagha use ho sakta hai.
+
+Q2. Nodejs m module system?
+Ans: Nodejs CommonJs use karta hai jis se hum kuch aise keywords use kar sakte hai like:
+1. require() => for import
+2. module.exports => for export
+
+Q3. Custom module banana ?
+Ans: check the folder custom-module
+
+Q4. require ka kaam kaise hota hai?
+Ans: first jab hum require use karte hai to iska mtlab ye hota hai ki humne kisi dusri file k code ki us file m access karna chahta hai ya fir use karna chahte hai isly hum usko require kar rhe hai. require us file ke code ko us file m load karta hai jisme hum is function ko mention ya add karte hai.
+for example : Biomentric system => ek bar office m submit ho gye to bar bar hume Biomentric k sath details nhi dene hai attendance k liye wo automatic hi verify kar lega.
+
+Q5. Core Modules kya hote hai?
+Ans: code module wo hote hai jo node m pre install / in-built hote hai like: fs, path, os, etc.
+
+Q6. Third-party Modules kya hote hai?
+Ans: Third-party modules wo hote hai jihne develop kisi aur ne kia hai but hum uski functionality / feature apne project m chahte hai like : express, mongoose, etc.
+
+Q7. module.exports vs exports ?
+Ans: Right way to export => module.exports hi hota hai, Qki module m se hum exports ki propety ko access kar rhe hai but exports ko use krte time wo function  export nhi hota hai, empty object milta hai.
+like {}
