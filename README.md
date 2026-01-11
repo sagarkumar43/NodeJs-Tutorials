@@ -45,3 +45,20 @@ This folder introduces the File System (fs) module in Node.js and demonstrates t
 - **sync.js**: Demonstrates synchronous file reading using `fs.readFileSync()`. This blocks the execution until the file is read, then continues with the next statements.
 
 - **async.js**: Demonstrates asynchronous file reading using `fs.readFile()` with a callback. This allows the program to continue executing while the file is being read in the background.
+
+## Day4 - HTTP Server in Node.js
+
+This folder covers creating HTTP servers using Node.js built-in HTTP module, including basic server setup, routing, and JSON responses.
+
+### Files:
+- **explaination.txt**: Contains explanations in Hindi about HTTP servers in Node.js, covering:
+  - What is an HTTP server?
+  - Node.js built-in HTTP module
+  - Creating your first HTTP server
+  - Request and Response objects
+  - Manual routing (before Express)
+  - JSON responses for APIs
+
+- **server.js**: A basic HTTP server that responds with "Hello, World!" on any request.
+
+- **Node.js**: Demonstrates manual routing with different responses for home (/), about (/about), and 404 pages.

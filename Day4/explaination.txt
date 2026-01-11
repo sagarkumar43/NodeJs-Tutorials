@@ -1,0 +1,80 @@
+Q1. HTTP server kya hota hai?
+Ans: HTTP server wo hota hai jo request get karta hai from client side se and reponse data deta hai server ko.
+    for example: agar user browser ke address bar par search karta hai google.com to it means user ne client se server ko request bheji hai ki user ko google.com chahiye. ab server check karega ki google.com kis IP par assesign hai aur kya ye real world m aisa kuch exist karta hai ya nhi agar karta hai to server response kar denge client ko.
+
+Q2. Node ka built-in HTTP module?
+Ans: Node ke andar ke built-in module hai jiska naam HTTP hai iski help se hum client se request le/ reponse bhej sakte hai - bina kisi extranal lib/framework ke.
+
+Q3. First HTTP server?
+Ans: Node.js hume JavaScript ki help se server-side programming karne deta hai. Node ke andar ek built-in HTTP module hota hai jiska use karke hum apna first HTTP server bana sakte hain. 
+Filename: server.js
+Code Explanation: 
+    1. HTTP module import karna, Ye Node.js ka built-in HTTP module hai. Iski help se hum HTTP server create karte hain. Iske liye koi external package install karne ki zarurat nahi hoti.
+    2. HTTP server create karna, http.createServer() ek server create karta hai. Ye ek callback function leta hai jisme:
+            2.1 req → client se aayi request
+            2.2 res → server ka response
+        res.end() ka kaam:
+            2.3 Client ko response bhejna
+            2.4 Request ko close karna
+    3. Port define karna, Port ek number hota hai jaha server listen karta hai. Commonly development me 3000 use hota hai.
+    4. Server start karna. server.listen() server ko start karta hai. Ab server is URL par available hoga:
+        http://localhost:3000
+
+Q4. Request (req) & Response (res)?
+Ans: req se kya milta hai?
+        1. URL
+        2. METHODS (GET, POST)
+        3. Headers
+            for examples: 1. console.log(req.url)
+                          2. console.log(req.method)
+
+Q5. Routing (Manual – samjho Express ke pehle)
+Ans: Routing ka matlab: User ne browser me kaunsa URL (path) request kiya hai, uske hisaab se kaunsa page ya response dena hai — isi ko routing kehte hain.
+Manual Routing (Express ke bina): Express se pehle hum Node.js ke http module me khud check karte the:
+    1. URL kya hai?
+    2. Us URL par kya response bhejna hai?
+    Basic Idea: Server request lega → URL check karega → matching response bhejega
+    node.js m example mention hai Samajhne ka Tarika
+    / → Home Page
+    /about → About Page
+    kuch aur → 404 error
+
+Q6. JSON Response (API basics)
+Ans: Jab hum API banate hain, to server HTML page nahi, balki data bhejta hai. Ye data mostly JSON format me hota hai.
+    res.setHeader('Content-Type', 'application/json');
+
+    res.end(JSON.stringify({
+    status: "success",
+    message: "API Working"
+    }));
+    ================================================================
+                        Line by Line Samjho 👇
+    ================================================================
+    1️⃣ Content-Type set karna: res.setHeader('Content-Type', 'application/json');
+        Browser / client ko batata hai ki response JSON format me hai, HTML nahi.
+    2️⃣ JavaScript Object banana: {status: "success", message: "API Working" };
+        Ye normal JS object hai (direct bhej nahi sakte).
+    3️⃣ JSON me convert karna: JSON.stringify(...)
+        JS object → JSON string Server sirf string / buffer bhej sakta hai.
+    4️⃣ Response bhejna: res.end(...)
+        Client ko final response send ho jaata hai.
+    Output (Client ko kya milega?): 
+        {
+        "status": "success",
+        "message": "API Working"
+        }
+
+Q7. Status Codes (Important)
+Ans:    | Code | Meaning      |
+        | ---- | ------------ |
+        | 200  | OK           |
+        | 201  | Created      |
+        | 400  | Bad Request  |
+        | 401  | Unauthorized |
+        | 404  | Not Found    |
+        | 500  | Server Error |
+
+Q8. Why Express exists?
+Ans: ❌ HTTP module: Manual routing, Too much boilerplate
+     ✅ Express: Clean routes, Middleware, Fast development
+
